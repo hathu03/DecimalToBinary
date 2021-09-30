@@ -21,11 +21,11 @@ include_once "Stack.php";
 if ($_SERVER['REQUEST_METHOD']== 'GET'){
     if (isset($_REQUEST['number'])){
         $number = $_REQUEST['number'];
-        convertDecimalToBinary($number);
+        convertBinaryToDecimal($number);
     }
 
 }
-function convertDecimalToBinary($number) {
+function convertBinaryToDecimal($number) {
      $stack = new Stack(100);
      while ($number/2 != 0) {
          $mod = $number%2;
